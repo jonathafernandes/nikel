@@ -19,7 +19,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS
+- HTML, Bootstrap e CSS
 - JavaScript
 - Git e Github
 
