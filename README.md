@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Apliação para controle de despesas, desenvolvida durante o curso Codaí da Growdev.
+Sistema para controle financeiro. Com entrada, saída e histórico de despesas, além de página para login e logoff. Aplicação responsiva.
 
 ## 🖱️ Visite
 
