@@ -17,9 +17,9 @@
 <body id="app">
     <header>
         <nav class="navbar navbar-expand bg-white">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="../assets/images/nikel-small-logo.png" alt="Logo do Nikel">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img class="img-fluid" src="../assets/images/logoipsum-245.svg" alt="Nikel">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -30,7 +30,7 @@
                     <div class="d-flex menu">
                         <a href="home.html">
                             <button class="btn" type="button">
-                                <i class="bi bi-house-door-fill color-secondary fs-4"></i>
+                                <i class="bi bi-house-fill color-secondary fs-4"></i>
                             </button>
                         </a>
                         <a href="transactions.html">
@@ -39,11 +39,11 @@
                             </button>
                         </a>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle fs-4"></i>
                             </button>
-                            <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                            <ul class="dropdown-menu logout p-0" aria-labelledby="dropdownMenuButton1">
                                 <li>
                                     <button class="dropdown-item" id="button-logout">Sair
                                     </button>
@@ -57,23 +57,18 @@
         </nav>
     </header>
     <main>
-        <div class="conteiner-lg mh-100">
+        <div class="container-lg mh-100">
             <div class="row">
-                <div class="col d-flex m-5 justify-content-start align-itens-center">
-                    <i class="bi bi-cash-coin color-primary icon-detail"></i>
+                <div class="col m-2">
+                    <i class="bi bi-cash-coin color-primary icon-detail m-3">Total</i>
                     <span class="fs-2" id="total">
                         R$ 0,00
                     </span>
                 </div>
-                <div class="col df-flex m-4 justify-content-end">
-                    <div class="text-center">
-                        <img src="../assets/images/coins-small.png" alt="Imagem de moedas">
-                    </div>
-                </div>
             </div>
             <div class="row">
-                <div class="col info shadow-lg m-5">
-                    <div class="conteiner">
+                <div class="col bg-light border p-2 my-2">
+                    <div class="container">
                         <div class="row">
                             <div class="col-6">
                                 <span class="fs-4 m-3">Entradas <i
