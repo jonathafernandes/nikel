@@ -4,9 +4,9 @@
 <br>
 
 <p align="center">
-  <img alt="" src="./assets/images/index-l.png" width="70%">
-  <img alt="" src="./assets/images/home-l.png" width="70%">
-  <img alt="" src="./assets/images/transactions-l.png" width="70%">
+  <img alt="" src="./src/assets/preview/Captura de tela de 2024-03-12 13-25-15.png" width="70%">
+  <img alt="" src="./src/assets/preview/Captura de tela de 2024-03-12 13-28-39.png" width="70%">
+  <img alt="" src="./src/assets/preview/Captura de tela de 2024-03-12 13-28-47.png" width="70%">
 </p>
 
 ---
