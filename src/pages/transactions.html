@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikel - Início</title>
+    <title>Nikel - Lançamentos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand bg-white">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="./assets/images/nikel-small-logo.png" alt="Logo do Nikel">
+                    <img class="img-fluid" src="../assets/images/nikel-small-logo.png" alt="Logo do Nikel">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -30,26 +30,26 @@
                     <div class="d-flex menu">
                         <a href="home.html">
                             <button class="btn" type="button">
-                                <i class="bi bi-house-door-fill color-secondary fs-4"></i>
+                                <i class="bi bi-house-door-fill fs-4"></i>
                             </button>
                         </a>
                         <a href="transactions.html">
                             <button class="btn" type="button">
-                                <i class="bi bi-currency-exchange fs-4"></i>
+                                <i class="bi bi-currency-exchange color-secondary fs-4"></i>
                             </button>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle fs-4"></i>
+                                </button>
+                                <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <button class="dropdown-item" id="button-logout">Sair
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle fs-4"></i>
-                            </button>
-                            <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
-                                <li>
-                                    <button class="dropdown-item" id="button-logout">Sair
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
 
                 </div>
@@ -60,14 +60,14 @@
         <div class="conteiner-lg mh-100">
             <div class="row">
                 <div class="col d-flex m-5 justify-content-start align-itens-center">
-                    <i class="bi bi-cash-coin color-primary icon-detail"></i>
-                    <span class="fs-2" id="total">
-                        R$ 0,00
+                    <i class="bi bi-currency-exchange color-primary icon-detail"></i>
+                    <span class="fs-2">
+                        Lançamentos
                     </span>
                 </div>
                 <div class="col df-flex m-4 justify-content-end">
                     <div class="text-center">
-                        <img src="./assets/images/coins-small.png" alt="Imagem de moedas">
+                        <img src="../assets/images/coins-small.png" alt="Imagem de moedas">
                     </div>
                 </div>
             </div>
@@ -75,34 +75,20 @@
                 <div class="col info shadow-lg m-5">
                     <div class="conteiner">
                         <div class="row">
-                            <div class="col-6">
-                                <span class="fs-4 m-3">Entradas <i
-                                        class="bi bi-arrow-down-circle fs-2 align-middle"></i>
-                                </span>
-                            </div>
-                            <div class="col-6">
-                                <span class="fs-4 m-3">Saídas <i class="bi bi-arrow-up-circle fs-2 align-middle"></i>
-                                </span>
-                            </div>
                             <div class="col-12">
-                                <hr class="my-2">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="conteiner p-0" id="cash-in-list">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Data</th>
+                                            <th scope="col">Valor</th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Descrição</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="transactions-list">
 
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="conteiner p-0" id="cash-out-list">
-
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button type="button" class="btn button-default m-3" id="transactions-button">
-                                    Ver todas
-                                </button>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -113,7 +99,6 @@
             </button>
         </div>
 
-        <!-- Modal -->
         <div class="modal fade" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -127,8 +112,7 @@
 
                             <div class="mb-3">
                                 <label for="value-input" class="form-label">Valor</label>
-                                <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp"
-                                    required>
+                                <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp" required>
                             </div>
                             <div class="mb-3">
                                 <label for="description-input" class="form-label">Descrição</label>
@@ -145,8 +129,8 @@
                                     <label class="form-check-label" for="inlineRadio1">Entrada</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2"
-                                        value="2">
+                                    <input class="form-check-input" type="radio" name="type-input"
+                                        id="inlineRadio2" value="2">
                                     <label class="form-check-label" for="inlineRadio2">Saída</label>
                                 </div>
                             </div>
@@ -163,8 +147,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="./js/home.js"></script>
+    <script src="../js/transactions.js"></script>
 </body>
-
 
 </html>
