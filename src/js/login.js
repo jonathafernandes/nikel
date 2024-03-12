@@ -4,7 +4,6 @@ const session = localStorage.getItem("session");
 
 checkLogged();
 
-//Realizar login:
 document.getElementById("login-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -15,13 +14,13 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     const account = getAccount(email);
 
     if (!account) {
-        alert("Ops! Verique o usuário ou a senha!")
+        alert("Verique o usuário ou a senha!")
         return;
     }
 
     if (account) {
         if (account.password !== password) {
-            alert("Opa! Verifique o usuário ou a senha.");
+            alert("Verifique o usuário ou a senha.");
             return;
         }
 
@@ -33,7 +32,6 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 });
 
 
-//Criar conta:
 document.getElementById("create-form").addEventListener("submit", function (e) {
     e.preventDefault();
 

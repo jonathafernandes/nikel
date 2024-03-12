@@ -7,7 +7,6 @@ let data = {
 
 document.getElementById("button-logout").addEventListener("click", logout);
 
-//Adicionar lançamento:
 document.getElementById("transaction-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -21,7 +20,7 @@ document.getElementById("transaction-form").addEventListener("submit", function 
     });
 
     saveData(data);
-    e.target.reset(); //Função padrão do HTML para limpar formulários
+    e.target.reset();
     myModal.hide();
 
     getTransactions();
@@ -38,7 +37,7 @@ function checkLogged() {
     }
 
     if (!logged) {
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
         return;
     }
 
@@ -55,7 +54,9 @@ function logout() {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
 
-    window.location.href = "index.html";
+    window.location.href = "/index.html";
+
+    return false;
 }
 
 function getTransactions() {
